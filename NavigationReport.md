@@ -71,6 +71,11 @@ The code consist of :
   - the input layer which size depends of the state_size parameter passed in the constructor
   - 2 hidden fully connected layers of 1024 cells each
   - the output layer which size depends of the action_size parameter passed in the constructor
+
+    #### Model architecture
+
+    A range of neural models were tried exploring wide, deep and shallow configurations. Overall, the simpler models performed as well or better than deeper ones and wide models performed worse than narrow ones. All models started with a 37 x 1 input vector from the environment, constructed two or more fully connected hidden layers and ended with a fully connected layer outputing 4 outputs, one for each action. 
+
 - dqn_agent.py : In this python file, a DQN agent and a Replay Buffer memory used by the DQN agent) are defined.
   - The DQN agent class is implemented, as described in the Deep Q-Learning algorithm. It provides several methods :
     - constructor : 
